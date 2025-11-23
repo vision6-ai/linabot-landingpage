@@ -26,11 +26,47 @@ const siteMapLinks = {
 
 export const FooterSection = (): JSX.Element => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    userType: "host",
+    message: "",
+  });
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleSubmit = () => {
-    setIsSubmitted(true);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(import.meta.env.VITE_CRM_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.fullName,
+          phone: `+972${formData.phone}`,
+          type: formData.userType,
+          message: formData.message,
+          timestamp: new Date().toISOString(),
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        console.error("Failed to submit form");
+        setIsSubmitted(true);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setIsSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   return (
     <section id="contact" className="w-full relative">
@@ -53,13 +89,16 @@ export const FooterSection = (): JSX.Element => {
           </h2>
 
           {!isSubmitted ? (
-            <>
+            <form onSubmit={handleSubmit}>
               <div className="absolute top-[120px] md:top-[139px] left-1/2 -translate-x-1/2 w-full max-w-[677px] px-6 md:px-4">
                 <div className="absolute top-0 right-6 md:left-auto md:right-[11px] w-full md:w-[310px] [font-family:'IBM_Plex_Sans',Helvetica] font-normal text-white text-[18px] md:text-[21px] tracking-[0] leading-[31.5px] [direction:rtl]">
                   שם מלא
                 </div>
 
                 <Input
+                  value={formData.fullName}
+                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                  required
                   className="absolute top-8 md:top-8 left-6 right-6 md:left-0 md:right-auto w-[calc(100%-48px)] md:w-[666px] h-[60px] bg-white rounded-lg border-0 text-right [font-family:'IBM_Plex_Sans',Helvetica] text-lg text-[#999999]"
                   placeholder="תכתבו פה"
                   dir="rtl"
@@ -76,6 +115,11 @@ export const FooterSection = (): JSX.Element => {
                 </div>
 
                 <Input
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value.replace(/\D/g, "") })}
+                  required
+                  type="tel"
+                  pattern="[0-9]{9,10}"
                   className="absolute top-[136px] left-[112px] md:left-[132px] right-6 md:right-auto w-[calc(100%-136px)] md:w-[535px] h-[60px] bg-white rounded-lg border-0"
                   dir="rtl"
                 />
@@ -86,6 +130,8 @@ export const FooterSection = (): JSX.Element => {
                   </div>
 
                   <RadioGroup
+                    value={formData.userType}
+                    onValueChange={(value) => setFormData({ ...formData, userType: value })}
                     defaultValue="host"
                     className="absolute top-[34px] right-6 md:right-0 md:left-0 flex gap-4 md:gap-[31px]"
                     dir="rtl"
@@ -127,6 +173,9 @@ export const FooterSection = (): JSX.Element => {
                 </div>
 
                 <Textarea
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  required
                   className="absolute top-[319px] left-6 right-6 md:left-px md:right-auto w-[calc(100%-48px)] md:w-[666px] h-[150px] bg-white rounded-lg border-0 text-right [font-family:'DM_Sans',Helvetica] text-lg text-[#999999] resize-none"
                   placeholder="אני פונה בקשר ל..."
                   dir="rtl"
@@ -134,14 +183,15 @@ export const FooterSection = (): JSX.Element => {
               </div>
 
               <Button
-                onClick={handleSubmit}
-                className="absolute top-[610px] md:top-[640px] left-1/2 -translate-x-1/2 w-full max-w-[310px] mx-4 min-h-[50px] bg-[#7f6cff] hover:bg-[#6b5ce6] rounded-[50px] px-6 py-3"
+                type="submit"
+                disabled={isSubmitting}
+                className="absolute top-[610px] md:top-[640px] left-1/2 -translate-x-1/2 w-full max-w-[310px] mx-4 min-h-[50px] bg-[#7f6cff] hover:bg-[#6b5ce6] disabled:opacity-50 disabled:cursor-not-allowed rounded-[50px] px-6 py-3"
               >
                 <span className="font-semibold text-xl md:text-2xl [font-family:'IBM_Plex_Sans',Helvetica] text-white [direction:rtl]">
-                  שליחה
+                  {isSubmitting ? "שולח..." : "שליחה"}
                 </span>
               </Button>
-            </>
+            </form>
           ) : (
             <div className="absolute top-[140px] md:top-[180px] left-1/2 -translate-x-1/2 w-full max-w-[600px] px-6 flex flex-col items-center">
               <img
