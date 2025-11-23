@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
@@ -16,12 +16,26 @@ import { StickyTabs } from "../../components/StickyTabs";
 
 export const HomePageHosts = (): JSX.Element => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [activeType, setActiveType] = useState<ContentType>("מארחים");
   const { content, loading } = useContent(activeType);
 
   const handleCardChange = (cardId: string) => {
     setActiveType(cardId as ContentType);
   };
+
+  useEffect(() => {
+    const state = location.state as { scrollTo?: string } | null;
+    if (state?.scrollTo) {
+      setTimeout(() => {
+        const targetSection = document.getElementById(state.scrollTo!);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+      window.history.replaceState({}, document.title);
+    }
+  }, [location]);
 
   if (loading || !content) {
     return (

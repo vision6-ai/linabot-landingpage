@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "../../../../components/ui/button";
 import { Input } from "../../../../components/ui/input";
 import { Label } from "../../../../components/ui/label";
@@ -25,6 +26,8 @@ const siteMapLinks = {
 
 export const FooterSection = (): JSX.Element => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSubmit = () => {
     setIsSubmitted(true);
@@ -187,9 +190,10 @@ export const FooterSection = (): JSX.Element => {
                 };
 
                 const handleClick = (e: React.MouseEvent, linkText: string) => {
+                  e.preventDefault();
+
                   if (linkText === "תקנון ותנאי שימוש" || linkText === "מדיניות הפרטיות") {
-                    e.preventDefault();
-                    window.location.href = '/terms';
+                    navigate('/terms');
                     return;
                   }
 
@@ -198,10 +202,13 @@ export const FooterSection = (): JSX.Element => {
                   if (linkText === "צור קשר") targetId = "contact";
 
                   if (targetId) {
-                    e.preventDefault();
-                    const targetSection = document.getElementById(targetId);
-                    if (targetSection) {
-                      targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    if (location.pathname !== '/') {
+                      navigate('/', { state: { scrollTo: targetId } });
+                    } else {
+                      const targetSection = document.getElementById(targetId);
+                      if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
                     }
                   }
                 };
@@ -229,16 +236,21 @@ export const FooterSection = (): JSX.Element => {
                 };
 
                 const handleClick = (e: React.MouseEvent, linkText: string) => {
+                  e.preventDefault();
+
                   let targetId = "";
                   if (linkText === "אודות") targetId = "about";
                   if (linkText === "מי זו לינה?") targetId = "who-is-lina";
                   if (linkText === "FAQ מתארחים" || linkText === "FAQ מארחים") targetId = "faq";
 
                   if (targetId) {
-                    e.preventDefault();
-                    const targetSection = document.getElementById(targetId);
-                    if (targetSection) {
-                      targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    if (location.pathname !== '/') {
+                      navigate('/', { state: { scrollTo: targetId } });
+                    } else {
+                      const targetSection = document.getElementById(targetId);
+                      if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
                     }
                   }
                 };
