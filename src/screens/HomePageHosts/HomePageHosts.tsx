@@ -54,7 +54,7 @@ export const HomePageHosts = (): JSX.Element => {
       <StickyTabs activeCard={activeType} onCardChange={handleCardChange} />
 
       <section id="about" className="relative w-full flex flex-col items-center py-8 md:py-16 pt-16 md:pt-32 px-4 transition-opacity duration-500 animate-in fade-in" key={activeType}>
-        <div className="w-full max-w-[884px] [font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[28px] md:text-[40px] text-center tracking-[0] leading-[1.16] [direction:rtl]">
+        <div className="w-full max-w-[884px] [font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[28px] md:text-[40px] text-center tracking-[0] leading-[1.16] [direction:rtl] animate-fade-in-up">
           {content.intro.title}
         </div>
 
@@ -97,7 +97,7 @@ export const HomePageHosts = (): JSX.Element => {
       </section>
 
       <section id="who-is-lina" className="relative w-full flex flex-col items-center py-8 md:py-16 px-4">
-        <div className="w-full max-w-[473px] [font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[36px] md:text-[56px] text-center tracking-[0] leading-[1.2] [direction:rtl]">
+        <div className="w-full max-w-[473px] [font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[36px] md:text-[56px] text-center tracking-[0] leading-[1.2] [direction:rtl] animate-fade-in-up">
           {content.about.title}
         </div>
 
@@ -111,7 +111,7 @@ export const HomePageHosts = (): JSX.Element => {
       </section>
 
       <section className="relative w-full flex flex-col items-center py-8 md:py-16 px-4">
-        <div className="w-full max-w-[836px] [font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[36px] md:text-[56px] leading-[1.16] text-center tracking-[0] [direction:rtl]">
+        <div className="w-full max-w-[836px] [font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[36px] md:text-[56px] leading-[1.16] text-center tracking-[0] [direction:rtl] animate-fade-in-up">
           {content.packages.title}
         </div>
 
@@ -150,7 +150,7 @@ export const HomePageHosts = (): JSX.Element => {
       </section>
 
       <section id="faq" className="relative w-full flex flex-col items-center py-8 md:py-16 px-4">
-        <div className="w-full max-w-[940px] bg-[#7f6cff] rounded-[10px] shadow-[0px_6px_11px_#00000040] py-6 px-6 md:px-8 flex items-center justify-center">
+        <div className="w-full max-w-[940px] bg-[#7f6cff] rounded-[10px] shadow-[0px_6px_11px_#00000040] py-6 px-6 md:px-8 flex items-center justify-center animate-scale-in">
           <div className="[font-family:'Secular_One',Helvetica] font-normal text-white text-[28px] md:text-4xl tracking-[0] leading-[1.16] [direction:rtl]">
             {content.faq.title}
           </div>

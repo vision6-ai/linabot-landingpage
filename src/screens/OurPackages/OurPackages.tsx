@@ -159,11 +159,11 @@ export const OurPackages = (): JSX.Element => {
       />
 
       <div className="bg-white w-full lg:min-w-[1280px] flex flex-col items-center relative pb-40">
-        <h1 className="mt-20 w-full max-w-[903px] px-4 [font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[36px] md:text-[56px] leading-[1.16] text-center tracking-[0] [direction:rtl]">
+        <h1 className="mt-20 w-full max-w-[903px] px-4 [font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[36px] md:text-[56px] leading-[1.16] text-center tracking-[0] [direction:rtl] animate-fade-in-up">
           כל חבילה כוללת פניות מאומתות מאורחים פוטנציאליים.
         </h1>
 
-        <p className="mt-[33px] w-full max-w-[875px] px-4 [font-family:'IBM_Plex_Sans',Helvetica] font-bold text-gray-2 text-lg md:text-2xl leading-[1.2] text-center tracking-[0] [direction:rtl]">
+        <p className="mt-[33px] w-full max-w-[875px] px-4 [font-family:'IBM_Plex_Sans',Helvetica] font-bold text-gray-2 text-lg md:text-2xl leading-[1.2] text-center tracking-[0] [direction:rtl] animate-fade-in">
           אפשר לבטל בכל רגע
         </p>
 

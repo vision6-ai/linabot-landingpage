@@ -24,7 +24,7 @@ export const TermsPage = (): JSX.Element => {
             </p>
 
             <div>
-              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right">
+              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right animate-fade-in-up">
                 1. אופי השירות
               </h2>
               <div className="space-y-4 mr-4">
@@ -43,7 +43,7 @@ export const TermsPage = (): JSX.Element => {
             </div>
 
             <div>
-              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right">
+              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right animate-fade-in-up">
                 2. הרשמה ושימוש
               </h2>
               <div className="space-y-4 mr-4">
@@ -60,7 +60,7 @@ export const TermsPage = (): JSX.Element => {
             </div>
 
             <div>
-              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right">
+              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right animate-fade-in-up">
                 3. אחריות משתמשים
               </h2>
               <div className="space-y-4 mr-4">
@@ -77,7 +77,7 @@ export const TermsPage = (): JSX.Element => {
             </div>
 
             <div>
-              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right">
+              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right animate-fade-in-up">
                 4. תשלומים ותמחור
               </h2>
               <div className="space-y-4 mr-4">
@@ -94,7 +94,7 @@ export const TermsPage = (): JSX.Element => {
             </div>
 
             <div>
-              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right">
+              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right animate-fade-in-up">
                 5. ביטול והחזרים
               </h2>
               <div className="space-y-4 mr-4">
@@ -108,7 +108,7 @@ export const TermsPage = (): JSX.Element => {
             </div>
 
             <div>
-              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right">
+              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right animate-fade-in-up">
                 6. הגבלת אחריות
               </h2>
               <div className="space-y-4 mr-4">
@@ -125,7 +125,7 @@ export const TermsPage = (): JSX.Element => {
             </div>
 
             <div>
-              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right">
+              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right animate-fade-in-up">
                 7. קניין רוחני
               </h2>
               <div className="space-y-4 mr-4">
@@ -139,7 +139,7 @@ export const TermsPage = (): JSX.Element => {
             </div>
 
             <div>
-              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right">
+              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right animate-fade-in-up">
                 8. פרטיות ואבטחת מידע
               </h2>
               <div className="space-y-4 mr-4">
@@ -153,7 +153,7 @@ export const TermsPage = (): JSX.Element => {
             </div>
 
             <div>
-              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right">
+              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right animate-fade-in-up">
                 9. סיום שימוש
               </h2>
               <div className="space-y-4 mr-4">
@@ -167,7 +167,7 @@ export const TermsPage = (): JSX.Element => {
             </div>
 
             <div>
-              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right">
+              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right animate-fade-in-up">
                 10. שינויים בתקנון
               </h2>
               <div className="space-y-4 mr-4">
@@ -184,7 +184,7 @@ export const TermsPage = (): JSX.Element => {
             </div>
 
             <div>
-              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right">
+              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right animate-fade-in-up">
                 11. דין וסמכות שיפוט
               </h2>
               <div className="space-y-4 mr-4">
@@ -198,7 +198,7 @@ export const TermsPage = (): JSX.Element => {
             </div>
 
             <div>
-              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right">
+              <h2 className="[font-family:'Secular_One',Helvetica] font-normal text-[#7f6cff] text-[24px] md:text-[32px] tracking-[0] leading-[1.2] mb-4 text-right animate-fade-in-up">
                 12. יצירת קשר
               </h2>
               <div className="space-y-4 mr-4">

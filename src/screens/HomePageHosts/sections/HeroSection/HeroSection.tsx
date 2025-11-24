@@ -199,7 +199,7 @@ export const HeroSection = ({ heroTitle, backgroundImage }: HeroSectionProps): J
         })}
       </nav>
 
-      <h1 className="absolute top-[80px] md:top-[158px] left-1/2 -translate-x-1/2 w-full md:w-[90%] max-w-[630px] px-4 [font-family:'Secular_One',Helvetica] font-normal text-white text-[46px] md:text-[66px] leading-[1.07] text-center tracking-[0] [direction:rtl]">
+      <h1 className="absolute top-[80px] md:top-[158px] left-1/2 -translate-x-1/2 w-full md:w-[90%] max-w-[630px] px-4 [font-family:'Secular_One',Helvetica] font-normal text-white text-[46px] md:text-[66px] leading-[1.07] text-center tracking-[0] [direction:rtl] animate-fade-in-up">
         {heroTitle || "לינה היא בוט חכם בוואטסאפ שמחבר בין מתארחים למארחים"}
       </h1>
     </section>

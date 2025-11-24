@@ -84,7 +84,7 @@ export const FooterSection = (): JSX.Element => {
             src="/vector.svg"
           />
 
-          <h2 className="absolute top-[60px] md:top-[87px] left-1/2 -translate-x-1/2 [font-family:'Secular_One',Helvetica] font-normal text-white text-[36px] md:text-[56px] text-left tracking-[0] leading-[1.2] [direction:rtl]">
+          <h2 className="absolute top-[60px] md:top-[87px] left-1/2 -translate-x-1/2 [font-family:'Secular_One',Helvetica] font-normal text-white text-[36px] md:text-[56px] text-left tracking-[0] leading-[1.2] [direction:rtl] animate-fade-in-up">
             צור קשר
           </h2>
 
@@ -226,7 +226,7 @@ export const FooterSection = (): JSX.Element => {
             src="/---------copy--1--1.png"
           />
 
-          <h3 className="absolute top-[100px] md:top-[140px] left-1/2 -translate-x-1/2 font-medium text-[#17c3b2] text-[18px] md:text-[21px] text-center leading-[52.5px] [font-family:'IBM_Plex_Sans',Helvetica] tracking-[0] [direction:rtl]">
+          <h3 className="absolute top-[100px] md:top-[140px] left-1/2 -translate-x-1/2 font-medium text-[#17c3b2] text-[18px] md:text-[21px] text-center leading-[52.5px] [font-family:'IBM_Plex_Sans',Helvetica] tracking-[0] [direction:rtl] animate-fade-in">
             מפת אתר
           </h3>
 
